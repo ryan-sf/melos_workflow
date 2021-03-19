@@ -16,6 +16,12 @@ jobs:
 
       - uses: subosito/flutter-action@v1
 
+      - name: Add pub cache to path
+        shell: bash
+        run: |
+          PUB_CACHE=$FLUTTER_HOME/.pub-cache/bin
+          echo "export PATH=$PATH:$PUB_CACHE" >> $GITHUB_PATH
+
       - name: Install project dependencies
         run: |
           dart pub global activate melos
