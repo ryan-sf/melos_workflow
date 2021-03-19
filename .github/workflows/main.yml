@@ -19,8 +19,6 @@ jobs:
       - name: Add pub cache to path
         shell: bash
         run: |
-          PUB_CACHE=$FLUTTER_HOME/.pub-cache/bin
-          echo "export PATH=$PATH:$PUB_CACHE" >> $GITHUB_PATH
           echo "export PATH=$PATH:$HOME/.pub-cache/bin" >> $GITHUB_PATH
 
 
