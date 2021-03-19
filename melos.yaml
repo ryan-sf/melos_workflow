@@ -1,0 +1,8 @@
+name: melos_workflow
+packages:
+  - packages/**
+
+scripts:
+  get:
+    run: melos exec flutter pub get
+    description: Get dependencies for all packages.
