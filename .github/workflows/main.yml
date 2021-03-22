@@ -24,6 +24,7 @@ jobs:
       - name: Install project dependencies
         run: |
           dart pub global activate melos
+          dart pub global activate dartdoc
 
       - name: Flutter get
         run: melos run get
