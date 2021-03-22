@@ -6,3 +6,15 @@ scripts:
   get:
     run: melos exec flutter pub get
     description: Get dependencies for all packages.
+
+  docs:
+    run: melos exec -c 1 -- "dart pub global run dartdoc --output ../../public/melos_workflow_app/docs"
+    description: Generate dartdocs.
+
+  build:web:
+    run: melos exec -c 1 -- "flutter build web"
+    description: Generate dartdocs.
+
+  stage:web:
+    run: melos exec -c 1 -- "mkdir -p ../../public/melos_workflow_app && mv build/web ../../public/melos_workflow_app"
+    description: Generate dartdocs.
