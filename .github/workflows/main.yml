@@ -6,6 +6,11 @@ on:
       - main
       - develop
 
+
+concurrency:
+  group: main
+  cancel-in-progress: true
+
 jobs:
   docs:
     name: Build & deploy docs
