@@ -23,6 +23,9 @@ jobs:
 
       - name: Install dependencies
         uses: ./.github/workflows/composites/install
+        with:
+          post_setup_run: |
+            echo Example post setup script from docs job
 
       - name: Build docs
         run: melos run docs
@@ -46,6 +49,9 @@ jobs:
       
       - name: Install dependencies
         uses: ./.github/workflows/composites/install
+        with:
+          post_setup_run: |
+            echo Example post setup script from web job
 
       - name: Build web
         run: melos run build:web && melos run stage:web
