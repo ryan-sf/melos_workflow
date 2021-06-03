@@ -8,5 +8,7 @@ runs:
       run: |
         dart pub global activate melos
         dart pub global activate dartdoc
+      shell: bash
     - name: Install local dependencies
       run: melos run get
+      shell: bash
