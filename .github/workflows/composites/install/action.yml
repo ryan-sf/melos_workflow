@@ -1,0 +1,12 @@
+
+name: 'Install'
+description: 'Install project dependencies'
+runs:
+  using: "composite"
+  steps:
+    - name: Install project dependencies
+      run: |
+        dart pub global activate melos
+        dart pub global activate dartdoc
+    - name: Install local dependencies
+      run: melos run get
