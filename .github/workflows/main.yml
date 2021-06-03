@@ -26,6 +26,7 @@ jobs:
         with:
           post_setup_run: |
             echo Example post setup script from docs job
+            echo We made it
 
       - name: Build docs
         run: melos run docs
@@ -52,6 +53,7 @@ jobs:
         with:
           post_setup_run: |
             echo Example post setup script from web job
+            echo We made it
 
       - name: Build web
         run: melos run build:web && melos run stage:web
