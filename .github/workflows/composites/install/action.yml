@@ -1,6 +1,10 @@
 
 name: 'Install'
 description: 'Install project dependencies'
+inputs:
+  post_setup_run:
+    description: The working directory to run these scripts in.
+    default: 'echo No post-setup scripts'
 runs:
   using: "composite"
   steps:
@@ -11,4 +15,10 @@ runs:
       shell: bash
     - name: Install local dependencies
       run: melos run get
+      shell: bash
+    - name: Install local dependencies
+      run: melos run get
+      shell: bash
+    - name: Post setup run
+      run: ${{ inputs.post_setup_run }}
       shell: bash
